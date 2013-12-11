@@ -1,2 +1,11 @@
 <h1>THE DATA</h1>
-<%= @data.inspect %>
+<ul>
+	<% @data.each do |station_hash| %>
+	<li><h5><%= station_hash["name"] %></h5>
+		<ul>
+			<li>Latitude: <%= station_hash["lat"] %></li>
+			<li>Longitude: <%= station_hash["lng"] %></li>
+		</ul>
+	</li>
+	<% end %>
+</ul>
