@@ -3,13 +3,13 @@
 	<label for="POST-route">start:</label>
 	<select id="POST-route" name="start">
 		<% @data.each do |station_hash| %>
-			<option value="<%= station_hash[:name] %>"><%= station_hash["name"] %></option>
+			<option value="<%= station_hash["name"] %>"><%= station_hash["name"] %></option>
 		<% end %>
 	</select>
 	<label for="POST-route">end:</label>
 	<select id="POST-route" name="end">
 		<% @data.each do |station_hash| %>
-			<option value="<%= station_hash[:name] %>"><%= station_hash["name"] %></option>
+			<option value="<%= station_hash["name"] %>"><%= station_hash["name"] %></option>
 		<% end %>
 	</select>
 
@@ -17,3 +17,5 @@
 
 	<button type/"submit" value="submit">Submit</button>
 </form>
+
+<p><%= params.inspect%></p>
